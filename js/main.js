@@ -21,6 +21,10 @@ async function sendFormToAdmin(payload, subject, autoReplyMessage) {
   formData.append('_subject', subject);
   formData.append('_template', 'table');
   formData.append('_autoresponse', autoReplyMessage);
+  formData.append('_captcha', 'false');
+  if (payload.email) {
+    formData.append('_replyto', payload.email);
+  }
 
   const response = await fetch(`https://formsubmit.co/ajax/${ADMIN_NOTIFICATION_EMAIL}`, {
     method: 'POST',
