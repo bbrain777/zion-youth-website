@@ -1,5 +1,5 @@
 // TODO: Replace with your real admin inbox email.
-const ADMIN_NOTIFICATION_EMAIL = 'admin@zionyouths.org';
+const ADMIN_NOTIFICATION_EMAIL = 'info@zionyouths.org';
 
 // TODO: Replace with your real donation checkout link (PayPal/Stripe/Paystack/Flutterwave).
 const DONATION_CHECKOUT_URL = 'https://www.paypal.com/donate/?hosted_button_id=REPLACE_ME';
@@ -201,3 +201,4 @@ if (contactForm && contactThankYou) {
     }
   });
 }
+
