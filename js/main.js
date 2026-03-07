@@ -52,3 +52,16 @@ if (donationForm) {
     donationForm.reset();
   });
 }
+
+// Contact form submission handling (static site: prevent POST to page)
+const contactForm = document.querySelector('.contact-form');
+const contactThankYou = document.getElementById('contact-thankyou');
+
+if (contactForm && contactThankYou) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    contactThankYou.textContent = `Thank you, ${contactForm.name.value}. Your message has been received.`;
+    contactThankYou.classList.remove('hidden');
+    contactForm.reset();
+  });
+}
