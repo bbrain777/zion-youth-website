@@ -2,13 +2,22 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+}
 
 // Theme toggle button
 const themeToggleBtn = document.getElementById('theme-toggle');
 const body = document.body;
+
+function updateThemeToggleIcon(theme) {
+  if (!themeToggleBtn) {
+    return;
+  }
+  themeToggleBtn.textContent = theme === 'dark' ? '☀' : '🌙';
+}
 
 function setTheme(theme) {
   if (theme === 'dark') {
@@ -18,6 +27,7 @@ function setTheme(theme) {
     body.classList.remove('dark-theme');
     localStorage.setItem('theme', 'light');
   }
+  updateThemeToggleIcon(theme);
 }
 
 // Load saved theme on page load
@@ -26,13 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
   setTheme(savedTheme);
 });
 
-themeToggleBtn.addEventListener('click', () => {
-  if (body.classList.contains('dark-theme')) {
-    setTheme('light');
-  } else {
-    setTheme('dark');
-  }
-});
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener('click', () => {
+    if (body.classList.contains('dark-theme')) {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
+  });
+}
 
 // Donation form submission handling
 const donationForm = document.getElementById('donation-form');
