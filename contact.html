@@ -5,9 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-    content="Contact ZION Youths Development Initiative for inquiries, partnerships, or support." />
+    content="Contact ZION Youth Development Initiative for inquiries, partnerships, or support." />
   <title>Contact - ZION Youths</title>
-  <link rel="icon" type="image/png" href="images/Zion_youth_logo.png" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,24 +15,28 @@
     rel="stylesheet" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=20260307e" />
+  <link rel="stylesheet" href="css/styles.css" />
 
   <!-- JavaScript -->
-  <script src="js/main.js?v=20260307d" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">ZION Youths</div>
+      <div class="logo">
+        <img src="images/Zion_youth_logo.png" alt="ZION Youth Logo" class="logo-img" />
+        <span>ZION Youth</span>
+      </div>
       <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="programs.html">Programs</a></li>
         <li><a href="donate.html">Donate</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
-      <button id="theme-toggle" aria-label="Toggle theme">&#127769;</button>
+      <button id="theme-toggle" aria-label="Toggle theme">&#9681;</button>
     </nav>
   </header>
 
@@ -44,7 +47,7 @@
     </section>
 
     <section class="contact-form-section container">
-      <form class="contact-form">
+      <form class="contact-form" action="#" method="post">
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" required />
 
@@ -56,23 +59,15 @@
 
         <button type="submit" class="btn">Send Message</button>
       </form>
-      <p id="contact-thankyou" class="thank-you hidden" aria-live="polite"></p>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 ZION Youths Development Initiative</p>
+      <p>&copy; 2025 ZION Youth Development Initiative</p>
       <p><a href="references.html">References</a></p>
     </div>
   </footer>
 </body>
 
 </html>
-
-
-
-
-
-
-
