@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">ZION Youth glowing logo</title>
+  <desc id="desc">A glowing blue and gold ZION Youth monogram with an upward path and community star.</desc>
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="48%" r="56%">
+      <stop offset="0%" stop-color="#4fd8ff" stop-opacity="0.42"/>
+      <stop offset="58%" stop-color="#0a5a78" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#071f2e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shield" x1="58" y1="44" x2="260" y2="284" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f6f94"/>
+      <stop offset="48%" stop-color="#083b57"/>
+      <stop offset="100%" stop-color="#071f2e"/>
+    </linearGradient>
+    <linearGradient id="path" x1="74" y1="224" x2="260" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1fc7ff"/>
+      <stop offset="48%" stop-color="#34a7ff"/>
+      <stop offset="100%" stop-color="#f2b84b"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0.12 0 0 0 0 0.78 0 0 0 0 1 0 0 0 0.72 0" result="blueGlow"/>
+      <feMerge>
+        <feMergeNode in="blueGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="320" height="320" rx="72" fill="#071f2e"/>
+  <circle cx="160" cy="158" r="132" fill="url(#halo)"/>
+  <path fill="url(#shield)" d="M160 33c50 0 89 19 116 42-6 83-35 156-116 211C79 231 50 158 44 75c27-23 66-42 116-42Z"/>
+  <path fill="#ffffff" opacity="0.09" d="M160 54c40 0 72 13 95 29-7 69-31 128-95 175C96 211 72 152 65 83c23-16 55-29 95-29Z"/>
+  <path filter="url(#glow)" fill="url(#path)" d="M74 222c47-22 88-48 123-78H98l16-38h146l-7 28c-40 42-88 78-144 108 52-7 99-21 141-43l-9 40c-51 26-107 39-167 39V222Z"/>
+  <path fill="#f2b84b" d="M235 66l8 18 19 3-14 13 4 19-17-10-17 10 4-19-14-13 19-3 8-18Z"/>
+  <text x="160" y="194" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="104" font-weight="900" fill="#ffffff">Z</text>
+</svg>
