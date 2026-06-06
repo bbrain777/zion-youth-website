@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Support ZION Youth Development Initiative by making a donation." />
+  <title>Donate - ZION Youth</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">ZION Youth</div>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="donate.html" class="active">Donate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero small">
+      <h1>Make a Difference Today</h1>
+      <p>Your support helps empower and equip the next generation of leaders.</p>
+    </section>
+
+    <section class="donation-form-section">
+      <div class="form-wrapper">
+        <h2>Donate to ZION Youth</h2>
+        <form id="donation-form">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required />
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="amount">Donation Amount ($)</label>
+          <input type="number" id="amount" name="amount" min="1" required />
+
+          <label for="message">Message (Optional)</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button type="submit" class="btn">Submit Donation</button>
+        </form>
+        <div id="donation-thankyou" class="thank-you hidden"></div>
+      </div>
+
+      <div class="donation-img">
+        <img src="images/donate.jpg" alt="Support youth empowerment" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ZION Youth Development Initiative</p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

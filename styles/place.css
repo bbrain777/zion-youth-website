@@ -1,0 +1,86 @@
+:root {
+  --primary-color: #1e3a5f;
+  --accent-color: #ffffff;
+  --font-stack: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-stack);
+  background: #f4f4f4;
+  color: #111;
+}
+
+header, footer {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero {
+  position: relative;
+}
+
+picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  animation: fadeInUp 1s ease-out;
+}
+
+.data {
+  top: 10%;
+  left: 5%;
+  max-width: 260px;
+}
+
+.weather {
+  bottom: 10%;
+  right: 5%;
+  max-width: 260px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-icon {
+  width: 48px;
+  height: auto;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    position: static;
+    margin: 1rem auto;
+  }
+  .data, .weather {
+    max-width: 100%;
+  }
+  .weather h2::after {
+    content: ' ⛅';
+  }
+}

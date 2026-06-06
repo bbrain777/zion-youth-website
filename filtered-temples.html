@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Temple Picture Album - Olakunle Obademi">
+  <meta name="author" content="Olakunle Obademi">
+  <title>Temple Album - Olakunle Obademi</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 768px)">
+
+  <!-- JavaScript -->
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button id="menuBtn" aria-label="Menu">☰</button>
+    <nav id="navMenu">
+      <a href="#" data-filter="all">Home</a>
+      <a href="#" data-filter="old">Old</a>
+      <a href="#" data-filter="new">New</a>
+      <a href="#" data-filter="large">Large</a>
+      <a href="#" data-filter="small">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="grid" id="templeGrid">
+      <h2>Temples</h2>
+      <!-- Temple cards will be inserted here dynamically -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> 🌺 Olakunle Obademi 🌺 United Kingdom</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

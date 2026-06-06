@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stockton-on-Tees, UK</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Stockton-on-Tees</h1>
+    <p>North Yorkshire, United Kingdom</p>
+  </header>
+
+  <main>
+    <div class="hero">
+      <picture>
+        <source srcset="images/hero-large.webp" media="(min-width: 600px)">
+        <img src="images/hero-small.webp" alt="Riverside view of Stockton-on-Tees">
+      </picture>
+      <div class="card data">
+        <h2>Data</h2>
+        <ul>
+          <li><strong>Country:</strong> England, United Kingdom</li>
+          <li><strong>Region:</strong> North East England</li>
+          <li><strong>County:</strong> North Yorkshire</li>
+          <li><strong>Population:</strong> 196,600</li>
+          <li><strong>Language:</strong> English</li>
+          <li><strong>Currency:</strong> Pound Sterling</li>
+          <li><strong>Time Zone:</strong> BST, UTC+1</li>
+          <li><strong>Calling Code:</strong> +44</li>
+          <li><strong>River:</strong> River Tees</li>
+          <li><strong>Famous For:</strong> First passenger railway (1825)</li>
+          <li><strong>Landmarks:</strong> Infinity Bridge, Tees Barrage</li>
+        </ul>
+      </div>
+      <div class="card weather">
+        <h2>Weather <span class="emoji-icon">⛅</span></h2>
+        <ul>
+          <li>Temperature: <span id="temp">7</span> °C</li>
+          <li>Conditions: Partly Cloudy</li>
+          <li>Wind: <span id="speed">14</span> km/h</li>
+          <li>Wind Chill: <span id="chill">Calculating...</span></li>
+          <li><img src="images/weather-partly-cloudy.svg" alt="Partly Cloudy Icon" class="mobile-icon"></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | OLAKUNLE OBADEMI | Stockton-on-Tees, United Kingdom<br>
+    Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
