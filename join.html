@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Join ZION Youth Development Initiative as a youth member, volunteer, mentor, or partner." />
+  <title>Join - ZION Youth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="index.html">
+        <img src="images/Zion_youth_logo.png" alt="ZION Youth logo" class="logo-img" />
+        <span>ZION Youth</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="join.html" class="active nav-join">Join</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle theme">&#9681;</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title join-title">
+      <div class="container">
+        <p class="eyebrow">Member access</p>
+        <h1>Sign up to join the ZION Youth community.</h1>
+        <p>Complete the form below if you want to participate as a youth member, volunteer, mentor, program partner, or
+          donor contact. Your information is used for onboarding and program follow-up.</p>
+      </div>
+    </section>
+
+    <section class="container form-layout">
+      <div class="form-wrapper">
+        <p class="section-kicker">Membership application</p>
+        <h2>Tell us how you want to get involved.</h2>
+        <p class="form-note">When the Vercel database variables are connected, this form saves directly to the member
+          database. Do not enter passwords or sensitive identity documents here.</p>
+        <form class="site-form" data-member-form>
+          <div class="field-grid">
+            <label>First name
+              <input name="firstName" autocomplete="given-name" required />
+            </label>
+            <label>Last name
+              <input name="lastName" autocomplete="family-name" required />
+            </label>
+          </div>
+          <div class="field-grid">
+            <label>Email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label>Phone
+              <input name="phone" autocomplete="tel" />
+            </label>
+          </div>
+          <div class="field-grid">
+            <label>Country
+              <input name="country" autocomplete="country-name" required />
+            </label>
+            <label>City or community
+              <input name="city" autocomplete="address-level2" required />
+            </label>
+          </div>
+          <div class="field-grid">
+            <label>I want to join as
+              <select name="memberType" required>
+                <option value="">Choose one</option>
+                <option>Youth member</option>
+                <option>Volunteer</option>
+                <option>Mentor</option>
+                <option>Partner organization</option>
+                <option>Donor or sponsor</option>
+              </select>
+            </label>
+            <label>Primary interest
+              <select name="interest" required>
+                <option value="">Choose one</option>
+                <option>Leadership development</option>
+                <option>Digital skills</option>
+                <option>Entrepreneurship</option>
+                <option>Community outreach</option>
+                <option>Mentoring</option>
+                <option>Partnership</option>
+              </select>
+            </label>
+          </div>
+          <label>Tell us about your goals
+            <textarea name="goals" rows="5" required></textarea>
+          </label>
+          <label>Availability or notes
+            <textarea name="availability" rows="3"></textarea>
+          </label>
+          <button class="btn" type="submit">Submit Application</button>
+        </form>
+        <div class="status-message" role="status" aria-live="polite"></div>
+      </div>
+
+      <aside class="info-panel">
+        <img class="feature-image" src="images/ngo-membership.png" alt="Member registration support" loading="lazy" />
+        <h3>What happens after you sign up?</h3>
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3>Review</h3>
+            <p>The team checks your interests and the best pathway for your location and availability.</p>
+          </article>
+          <article class="timeline-item">
+            <h3>Onboarding</h3>
+            <p>You receive information about membership expectations, safeguarding, and upcoming opportunities.</p>
+          </article>
+          <article class="timeline-item">
+            <h3>Placement</h3>
+            <p>You are matched to a program, volunteer role, mentoring pathway, or partnership discussion.</p>
+          </article>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>ZION Youth Development Initiative</h3>
+        <p>Join the community and help build youth opportunity.</p>
+      </div>
+      <div>
+        <h3>Programs</h3>
+        <ul>
+          <li><a href="programs.html">Leadership</a></li>
+          <li><a href="programs.html">Digital skills</a></li>
+          <li><a href="programs.html">Outreach</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <ul>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">&copy; 2026 ZION Youth Development Initiative. All rights reserved.</div>
+  </footer>
+</body>
+
+</html>

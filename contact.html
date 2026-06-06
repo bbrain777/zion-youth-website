@@ -4,35 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description"
-    content="Contact ZION Youth Development Initiative for inquiries, partnerships, or support." />
-  <title>Contact - ZION Youths</title>
-
-  <!-- Google Fonts -->
+  <meta name="description" content="Contact ZION Youth Development Initiative for partnership, programs, donations, and membership." />
+  <title>Contact - ZION Youth</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
     rel="stylesheet" />
-
-  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- JavaScript -->
   <script src="js/main.js" defer></script>
 </head>
 
 <body>
   <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="images/Zion_youth_logo.png" alt="ZION Youth Logo" class="logo-img" />
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="index.html">
+        <img src="images/Zion_youth_logo.png" alt="ZION Youth logo" class="logo-img" />
         <span>ZION Youth</span>
-      </div>
-      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="programs.html">Programs</a></li>
+        <li><a href="join.html" class="nav-join">Join</a></li>
         <li><a href="donate.html">Donate</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
@@ -41,32 +36,91 @@
   </header>
 
   <main>
-    <section class="hero small">
-      <h1>Contact Us</h1>
-      <p>We'd love to hear from you. Reach out for collaborations, questions, or support.</p>
+    <section class="page-title contact-title">
+      <div class="container">
+        <p class="eyebrow">Contact and partnership</p>
+        <h1>Let’s build youth opportunity together.</h1>
+        <p>Reach out about programs, school partnerships, volunteer teams, sponsorships, media, and community projects.
+        </p>
+      </div>
     </section>
 
-    <section class="contact-form-section container">
-      <form class="contact-form" action="#" method="post">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required />
+    <section class="container contact-layout">
+      <div class="form-wrapper">
+        <p class="section-kicker">Send a message</p>
+        <h2>Tell us what you want to discuss.</h2>
+        <form class="site-form" data-contact-form>
+          <div class="field-grid">
+            <label>Full name
+              <input name="name" autocomplete="name" required />
+            </label>
+            <label>Email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+          </div>
+          <div class="field-grid">
+            <label>Organization
+              <input name="organization" autocomplete="organization" />
+            </label>
+            <label>Reason
+              <select name="reason" required>
+                <option value="">Choose one</option>
+                <option>Partnership</option>
+                <option>Membership</option>
+                <option>Donation</option>
+                <option>Program inquiry</option>
+                <option>Media or speaking</option>
+              </select>
+            </label>
+          </div>
+          <label>Message
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+        <div class="status-message" role="status" aria-live="polite"></div>
+      </div>
 
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit" class="btn">Send Message</button>
-      </form>
+      <aside class="info-panel">
+        <h3>Common ways to collaborate</h3>
+        <ul>
+          <li>Host a leadership or digital skills workshop.</li>
+          <li>Sponsor a youth training cohort or outreach day.</li>
+          <li>Volunteer as a mentor, facilitator, or project supporter.</li>
+          <li>Refer young people who need structured support.</li>
+        </ul>
+        <div class="pill-row">
+          <span class="pill">Schools</span>
+          <span class="pill">Faith groups</span>
+          <span class="pill">Businesses</span>
+          <span class="pill">Community leaders</span>
+        </div>
+      </aside>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 ZION Youth Development Initiative</p>
-      <p><a href="references.html">References</a></p>
+    <div class="container footer-grid">
+      <div>
+        <h3>ZION Youth Development Initiative</h3>
+        <p>We welcome serious partnership conversations and practical support.</p>
+      </div>
+      <div>
+        <h3>Act now</h3>
+        <ul>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html">Programs</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="container footer-bottom">&copy; 2026 ZION Youth Development Initiative. All rights reserved.</div>
   </footer>
 </body>
 

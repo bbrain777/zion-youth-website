@@ -4,34 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Support ZION Youth Development Initiative by making a donation." />
-  <title>Donate - ZION Youths</title>
-
-  <!-- Google Fonts -->
+  <meta name="description" content="Support ZION Youth Development Initiative through donations and sponsorship." />
+  <title>Donate - ZION Youth</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
     rel="stylesheet" />
-
-  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- JavaScript -->
   <script src="js/main.js" defer></script>
 </head>
 
 <body>
   <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="images/Zion_youth_logo.png" alt="ZION Youth Logo" class="logo-img" />
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="index.html">
+        <img src="images/Zion_youth_logo.png" alt="ZION Youth logo" class="logo-img" />
         <span>ZION Youth</span>
-      </div>
-      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="programs.html">Programs</a></li>
+        <li><a href="join.html" class="nav-join">Join</a></li>
         <li><a href="donate.html" class="active">Donate</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -40,43 +36,97 @@
   </header>
 
   <main>
-    <section class="hero small">
-      <h1>Make a Difference Today</h1>
-      <p>Your support helps empower and equip the next generation of leaders.</p>
+    <section class="page-title contact-title">
+      <div class="container">
+        <p class="eyebrow">Support the mission</p>
+        <h1>Fund programs that turn youth potential into action.</h1>
+        <p>Your support helps provide training materials, volunteer coordination, outreach logistics, mentoring, and
+          practical opportunities for young people.</p>
+      </div>
     </section>
 
     <section class="donation-form-section container">
       <div class="form-wrapper">
-        <h2>Donate to ZION Youth</h2>
-        <form id="donation-form">
-          <label for="fullName">Full Name</label>
-          <input type="text" id="fullName" name="fullName" required />
-
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="amount">Donation Amount ($)</label>
-          <input type="number" id="amount" name="amount" min="1" required />
-
-          <label for="message">Message (Optional)</label>
-          <textarea id="message" name="message" rows="4"></textarea>
-
-          <button type="submit" class="btn">Submit Donation</button>
+        <p class="section-kicker">Donation interest</p>
+        <h2>Tell us how you would like to support.</h2>
+        <p class="form-note">Secure online payment processing can be connected next. For now this form collects donor
+          interest so the team can follow up with verified giving details.</p>
+        <form id="donation-form" class="site-form">
+          <div class="field-grid">
+            <label>Full name
+              <input type="text" name="fullName" required />
+            </label>
+            <label>Email
+              <input type="email" name="email" required />
+            </label>
+          </div>
+          <div class="field-grid">
+            <label>Amount
+              <input type="number" name="amount" min="1" required />
+            </label>
+            <label>Currency
+              <select name="currency" required>
+                <option>GBP</option>
+                <option>USD</option>
+                <option>NGN</option>
+                <option>EUR</option>
+              </select>
+            </label>
+          </div>
+          <label>What would you like to support?
+            <select name="supportArea" required>
+              <option>Youth leadership training</option>
+              <option>Digital skills program</option>
+              <option>Community outreach</option>
+              <option>Mentoring and membership support</option>
+              <option>Where it is most needed</option>
+            </select>
+          </label>
+          <label>Message
+            <textarea name="message" rows="4"></textarea>
+          </label>
+          <button type="submit" class="btn">Submit Donation Interest</button>
         </form>
-        <div id="donation-thankyou" class="thank-you hidden"></div>
+        <div class="status-message" role="status" aria-live="polite"></div>
       </div>
 
-      <div class="donation-img">
-        <img src="images/donate.jpg" alt="Support youth empowerment" loading="lazy" />
+      <div>
+        <img class="feature-image" src="images/ngo-outreach.png" alt="Youth outreach supported by donors" loading="lazy" />
+        <div class="info-panel">
+          <h3>What donations support</h3>
+          <ul>
+            <li>Training materials, workbooks, and workshop supplies.</li>
+            <li>Venue, transport, and outreach logistics.</li>
+            <li>Volunteer coordination and safeguarding processes.</li>
+            <li>Digital skills equipment and learning access.</li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 ZION Youth Development Initiative</p>
-      <p><a href="references.html">References</a></p>
+    <div class="container footer-grid">
+      <div>
+        <h3>ZION Youth Development Initiative</h3>
+        <p>Every serious contribution helps create opportunity and accountability.</p>
+      </div>
+      <div>
+        <h3>Get involved</h3>
+        <ul>
+          <li><a href="join.html">Become a member</a></li>
+          <li><a href="contact.html">Partner with us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="container footer-bottom">&copy; 2026 ZION Youth Development Initiative. All rights reserved.</div>
   </footer>
 </body>
 

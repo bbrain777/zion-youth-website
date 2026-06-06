@@ -1,58 +1,102 @@
-// Toggle mobile menu
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const themeToggleBtn = document.getElementById("theme-toggle");
+const body = document.body;
 
 if (menuToggle && navLinks) {
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
+  menuToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("show");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
   });
 }
 
-// Theme toggle button
-const themeToggleBtn = document.getElementById('theme-toggle');
-const body = document.body;
-
 function setTheme(theme) {
-  if (theme === 'dark') {
-    body.classList.add('dark-theme');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    body.classList.remove('dark-theme');
-    localStorage.setItem('theme', 'light');
-  }
+  body.classList.toggle("dark-theme", theme === "dark");
+  localStorage.setItem("theme", theme);
 }
 
-// Load saved theme on page load
-document.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  setTheme(savedTheme);
+document.addEventListener("DOMContentLoaded", () => {
+  setTheme(localStorage.getItem("theme") || "light");
 });
 
 if (themeToggleBtn) {
-  themeToggleBtn.addEventListener('click', () => {
-    if (body.classList.contains('dark-theme')) {
-      setTheme('light');
-    } else {
-      setTheme('dark');
-    }
+  themeToggleBtn.addEventListener("click", () => {
+    setTheme(body.classList.contains("dark-theme") ? "light" : "dark");
   });
 }
 
-// Donation form submission handling
-const donationForm = document.getElementById('donation-form');
-const thankYouMessage = document.getElementById('donation-thankyou');
+function formDataToObject(form) {
+  return Object.fromEntries(new FormData(form).entries());
+}
 
-if (donationForm && thankYouMessage) {
-  donationForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+function showStatus(target, type, message) {
+  if (!target) return;
+  target.className = `status-message show ${type}`;
+  target.textContent = message;
+}
 
-    // Simple form validation can be added here if desired
+async function submitJson(form, endpoint, successMessage) {
+  const status = form.parentElement.querySelector(".status-message");
+  showStatus(status, "success", "Submitting...");
 
-    // Show thank you message
-    thankYouMessage.textContent = `Thank you, ${donationForm.fullName.value}, for your generous donation of $${donationForm.amount.value}!`;
-    thankYouMessage.classList.remove('hidden');
+  try {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formDataToObject(form)),
+    });
 
-    // Reset form
+    const result = await response.json().catch(() => ({}));
+
+    if (!response.ok) {
+      throw new Error(result.error || "We could not save this right now.");
+    }
+
+    form.reset();
+    showStatus(status, "success", successMessage);
+  } catch (error) {
+    showStatus(
+      status,
+      "error",
+      `${error.message} If this continues, please contact the ZION Youth team directly.`
+    );
+  }
+}
+
+document.querySelectorAll("[data-member-form]").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    submitJson(
+      form,
+      "/api/members",
+      "Thank you. Your member application has been saved and our team will follow up."
+    );
+  });
+});
+
+document.querySelectorAll("[data-contact-form]").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    submitJson(
+      form,
+      "/api/contact",
+      "Thank you. Your message has been saved and our team will respond soon."
+    );
+  });
+});
+
+const donationForm = document.getElementById("donation-form");
+
+if (donationForm) {
+  donationForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const status = donationForm.parentElement.querySelector(".status-message");
+    const name = donationForm.fullName.value || "friend";
+    showStatus(
+      status,
+      "success",
+      `Thank you, ${name}. Online payment processing is being connected; the team will contact you with secure giving options.`
+    );
     donationForm.reset();
   });
 }

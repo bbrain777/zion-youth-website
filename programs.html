@@ -4,34 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Programs offered by ZION Youth Development Initiative to empower youth." />
-  <title>Programs - ZION Youths</title>
-
-  <!-- Google Fonts -->
+  <meta name="description" content="Programs from ZION Youth Development Initiative." />
+  <title>Programs - ZION Youth</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
     rel="stylesheet" />
-
-  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- JavaScript -->
   <script src="js/main.js" defer></script>
 </head>
 
 <body>
   <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="images/Zion_youth_logo.png" alt="ZION Youth Logo" class="logo-img" />
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="index.html">
+        <img src="images/Zion_youth_logo.png" alt="ZION Youth logo" class="logo-img" />
         <span>ZION Youth</span>
-      </div>
-      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="programs.html" class="active">Programs</a></li>
+        <li><a href="join.html" class="nav-join">Join</a></li>
         <li><a href="donate.html">Donate</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -40,40 +36,119 @@
   </header>
 
   <main>
-    <section class="hero small">
-      <h1>Our Programs</h1>
-      <p>Empowering youth through leadership, skills, and community engagement.</p>
+    <section class="page-title programs-title">
+      <div class="container">
+        <p class="eyebrow">Programs</p>
+        <h1>Practical pathways for youth leadership, skills, and service.</h1>
+        <p>Our programs are designed to move young people from interest to action through training, mentoring, community
+          practice, and measurable follow-up.</p>
+      </div>
     </section>
 
     <section class="programs container">
       <article class="program">
-        <img src="images/leadership.jpg" alt="Leadership Program" loading="lazy" />
-        <h2>Leadership Development</h2>
-        <p>We train youth in communication, team building, and project management through leadership camps and peer
-          mentoring.</p>
+        <img src="images/ngo-leadership.png" alt="Leadership training session" loading="lazy" />
+        <div class="program-body">
+          <h2>Leadership Development</h2>
+          <p>Young people learn how to communicate clearly, lead teams, make decisions, resolve conflict, and plan
+            community projects responsibly.</p>
+          <ul>
+            <li>Public speaking and confidence building</li>
+            <li>Teamwork, ethics, and service leadership</li>
+            <li>Project planning and community problem solving</li>
+          </ul>
+        </div>
       </article>
-
       <article class="program">
-        <img src="images/skills.jpg" alt="Skills Training" loading="lazy" />
-        <h2>Skills & Empowerment</h2>
-        <p>Programs in entrepreneurship, tech literacy, and creative arts to equip youth with marketable skills and
-          self-confidence.</p>
+        <img src="images/ngo-digital-skills.png" alt="Digital skills training" loading="lazy" />
+        <div class="program-body">
+          <h2>Digital Skills and Enterprise</h2>
+          <p>Participants build practical digital literacy, employability habits, entrepreneurship thinking, and
+            confidence using tools needed in modern work.</p>
+          <ul>
+            <li>Computer and internet confidence</li>
+            <li>Career readiness and workplace habits</li>
+            <li>Business idea development and financial basics</li>
+          </ul>
+        </div>
       </article>
-
       <article class="program">
-        <img src="images/volunteer.jpg" alt="Community Engagement" loading="lazy" />
-        <h2>Community Engagement</h2>
-        <p>Youth-led service projects that address local challenges while fostering compassion and civic responsibility.
-        </p>
+        <img src="images/ngo-outreach.png" alt="Community outreach project" loading="lazy" />
+        <div class="program-body">
+          <h2>Community Outreach</h2>
+          <p>Youth teams put learning into practice through community service projects that respond to real needs and
+            build civic responsibility.</p>
+          <ul>
+            <li>Education and school-support outreach</li>
+            <li>Health, wellbeing, and dignity campaigns</li>
+            <li>Volunteer days and local partnership projects</li>
+          </ul>
+        </div>
       </article>
+    </section>
+
+    <section class="content-band">
+      <div class="container">
+        <p class="section-kicker">How programs work</p>
+        <h2>A simple model that keeps participants supported.</h2>
+        <div class="impact-grid">
+          <article class="impact-card">
+            <h3>1. Register</h3>
+            <p>Young people, volunteers, mentors, and partners submit their details through the member sign-up form.</p>
+          </article>
+          <article class="impact-card">
+            <h3>2. Assess</h3>
+            <p>The team reviews interests, location, safeguarding needs, skills, and the best route into participation.
+            </p>
+          </article>
+          <article class="impact-card">
+            <h3>3. Train</h3>
+            <p>Members join relevant workshops, mentoring circles, service teams, or project planning sessions.</p>
+          </article>
+          <article class="impact-card">
+            <h3>4. Serve and grow</h3>
+            <p>Participants apply what they learn, receive feedback, and build evidence of growth and contribution.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container split">
+      <div>
+        <p class="section-kicker">Partnership opportunities</p>
+        <h2>We welcome schools, community groups, donors, and mentors.</h2>
+        <p class="section-intro">Competitive NGOs grow through trusted partnerships. ZION Youth is building a partner
+          network for venues, training support, school access, professional mentoring, volunteer days, and project
+          funding.</p>
+        <a class="btn" href="contact.html">Discuss Partnership</a>
+      </div>
+      <img src="images/ngo-membership.png" alt="Youth organization registration and support desk" loading="lazy" />
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 ZION Youth Development Initiative</p>
-      <p><a href="references.html">References</a></p>
+    <div class="container footer-grid">
+      <div>
+        <h3>ZION Youth Development Initiative</h3>
+        <p>Programs that connect training, mentoring, and community impact.</p>
+      </div>
+      <div>
+        <h3>Get involved</h3>
+        <ul>
+          <li><a href="join.html">Become a member</a></li>
+          <li><a href="donate.html">Fund a program</a></li>
+          <li><a href="contact.html">Partner with us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="container footer-bottom">&copy; 2026 ZION Youth Development Initiative. All rights reserved.</div>
   </footer>
 </body>
 

@@ -4,88 +4,170 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="ZION Youth Development Initiative - Empowering the next generation." />
-  <meta name="author" content="ZION Youths" />
-  <title>ZION Youth - Empowering the Next Generation</title>
-
-  <!-- Google Fonts -->
+  <meta name="description"
+    content="ZION Youth Development Initiative equips young people through leadership, digital skills, mentoring, outreach, and community projects." />
+  <meta name="author" content="ZION Youth Development Initiative" />
+  <title>ZION Youth Development Initiative</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
     rel="stylesheet" />
-
-  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- JavaScript -->
   <script src="js/main.js" defer></script>
 </head>
 
 <body>
   <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="images/Zion_youth_logo.png" alt="ZION Youth Logo" class="logo-img" />
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="index.html">
+        <img src="images/Zion_youth_logo.png" alt="ZION Youth logo" class="logo-img" />
         <span>ZION Youth</span>
-      </div>
-      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="programs.html">Programs</a></li>
+        <li><a href="join.html" class="nav-join">Join</a></li>
         <li><a href="donate.html">Donate</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <button id="theme-toggle" aria-label="Toggle theme">&#9681;</button>
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Toggle theme">&#9681;</button>
+      </div>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div class="container">
-        <h1>Empowering the Next Generation</h1>
-        <p>Mentorship, skills training, and community service opportunities for young people ready to lead with purpose.</p>
-        <a href="programs.html" class="cta-button">Explore Programs</a>
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Youth development, service, and opportunity</p>
+          <h1>Equipping young people to lead change in their communities.</h1>
+          <p>ZION Youth Development Initiative supports young people with mentoring, leadership training, digital skills,
+            community service pathways, and practical opportunities to grow with purpose.</p>
+          <div class="hero-actions">
+            <a class="cta-button" href="join.html">Become a Member</a>
+            <a class="btn secondary" href="programs.html">Explore Programs</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Current priorities">
+          <p class="section-kicker">What we focus on</p>
+          <h3>Practical support from first contact to measurable growth.</h3>
+          <ul>
+            <li>Leadership and confidence building for youth and emerging volunteers.</li>
+            <li>Digital literacy, employability, and entrepreneurship preparation.</li>
+            <li>Community outreach projects designed with local needs in mind.</li>
+            <li>Member registration and follow-up managed through a secure data process.</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <section class="mission">
-      <div class="container">
-        <h2>Our Mission</h2>
-        <p>At ZION Youth Development Initiative, we are committed to equipping young people with the tools, skills, and
-          opportunities they need to thrive in a rapidly changing world.</p>
+    <section class="stats-band" aria-label="Impact priorities">
+      <div class="container stats-grid">
+        <div class="stat"><strong>4</strong><span>core program pillars</span></div>
+        <div class="stat"><strong>2</strong><span>communities of focus: Nigeria and diaspora</span></div>
+        <div class="stat"><strong>100%</strong><span>youth-centred project design</span></div>
+        <div class="stat"><strong>24/7</strong><span>online access for member sign-up</span></div>
       </div>
     </section>
 
-    <section class="highlights">
-      <div class="container">
-        <h2>Program Highlights</h2>
-        <div class="cards">
-          <article class="card">
-            <img src="images/leadership.jpg" alt="Youth leadership training" loading="lazy" />
-            <h3>Leadership Training</h3>
-            <p>Workshops and camps to build confidence and leadership skills.</p>
-          </article>
-          <article class="card">
-            <img src="images/volunteer.jpg" alt="Community volunteering" loading="lazy" />
-            <h3>Volunteer Engagement</h3>
-            <p>Engage youth in community-based volunteer programs that make a difference.</p>
-          </article>
-          <article class="card">
-            <img src="images/skills.jpg" alt="Youth skills development" loading="lazy" />
-            <h3>Skills Development</h3>
-            <p>Practical training in tech, entrepreneurship, and life skills.</p>
-          </article>
+    <section class="content-band">
+      <div class="container split">
+        <div>
+          <p class="section-kicker">Our mission</p>
+          <h2>We help young people move from potential to participation.</h2>
+          <p class="section-intro">Many young people have ambition but need structure, guidance, networks, and practical
+            opportunities. ZION Youth creates that bridge through programs that combine character, skills, service, and
+            accountability.</p>
+          <ul class="check-list">
+            <li>Mentorship circles that connect youth with experienced guides.</li>
+            <li>Training that builds workplace, leadership, and enterprise readiness.</li>
+            <li>Outreach projects that turn learning into visible community value.</li>
+          </ul>
+        </div>
+        <img src="images/ngo-leadership.png" alt="Young people in a leadership development workshop" loading="lazy" />
+      </div>
+    </section>
+
+    <section class="container">
+      <p class="section-kicker">Program highlights</p>
+      <h2>Built for real-world growth.</h2>
+      <p class="section-intro">Our work is organized around the needs young people repeatedly face: leadership,
+        employable skills, trusted relationships, and opportunities to contribute.</p>
+      <div class="cards">
+        <article class="card">
+          <img src="images/ngo-leadership.png" alt="Youth leadership workshop" loading="lazy" />
+          <div class="card-body">
+            <h3>Leadership Development</h3>
+            <p>Workshops, team challenges, public speaking practice, and project planning sessions that build confident
+              young leaders.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/ngo-digital-skills.png" alt="Youth digital skills training" loading="lazy" />
+          <div class="card-body">
+            <h3>Skills and Enterprise</h3>
+            <p>Digital literacy, entrepreneurship, employability habits, and practical learning designed for future work.
+            </p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/ngo-outreach.png" alt="Youth community outreach" loading="lazy" />
+          <div class="card-body">
+            <h3>Community Outreach</h3>
+            <p>Youth-led service projects that address education, wellbeing, and community support with dignity.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-band">
+      <div class="container split reverse">
+        <img src="images/ngo-membership.png" alt="Volunteer helping a young adult sign up" loading="lazy" />
+        <div>
+          <p class="section-kicker">Membership access</p>
+          <h2>A clearer route for youth, volunteers, and partners to join.</h2>
+          <p class="section-intro">The new membership process allows applicants to submit their details online. Once the
+            database environment is connected in Vercel, applications are saved securely for follow-up, onboarding, and
+            program placement.</p>
+          <div class="pill-row">
+            <span class="pill">Youth members</span>
+            <span class="pill">Volunteers</span>
+            <span class="pill">Mentors</span>
+            <span class="pill">Partners</span>
+          </div>
+          <a class="btn" href="join.html">Start Member Sign-Up</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 ZION Youth Development Initiative</p>
-      <p><a href="references.html">References</a></p>
+    <div class="container footer-grid">
+      <div>
+        <h3>ZION Youth Development Initiative</h3>
+        <p>Equipping young people through leadership, learning, service, and opportunity.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <ul>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="container footer-bottom">&copy; 2026 ZION Youth Development Initiative. All rights reserved.</div>
   </footer>
 </body>
 

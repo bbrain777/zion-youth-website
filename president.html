@@ -5,10 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Profile of Olakunle T. Obademi, President of ZION Youth Development Initiative." />
-  <title>President - Olakunle T. Obademi</title>
+  <title>President - ZION Youth</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <script src="js/main.js" defer></script>
@@ -16,16 +17,17 @@
 
 <body>
   <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="images/Zion_youth_logo.png" alt="ZION Youth Logo" class="logo-img" />
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="index.html">
+        <img src="images/Zion_youth_logo.png" alt="ZION Youth logo" class="logo-img" />
         <span>ZION Youth</span>
-      </div>
-      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="programs.html">Programs</a></li>
+        <li><a href="join.html" class="nav-join">Join</a></li>
         <li><a href="donate.html">Donate</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -36,80 +38,93 @@
   <main>
     <section class="page-title">
       <div class="container">
+        <p class="eyebrow">Leadership profile</p>
         <h1>Olakunle T. Obademi</h1>
-        <p>President of ZION Youth Development Initiative, educator, and emerging technology professional.</p>
+        <p>President of ZION Youth Development Initiative, educator, community builder, and technology-focused youth
+          development advocate.</p>
       </div>
     </section>
 
-    <section class="container profile-section">
+    <section class="container split">
       <div>
-        <h2>Leadership Profile</h2>
-        <p><strong>Olakunle T. Obademi</strong> is a visionary leader, educator, and emerging technology professional
-          dedicated to empowering communities through education, capacity building, and sustainable development. As the
-          <strong>President of ZION Youth Development Initiative</strong> since 2022, he has spearheaded programs that
-          provide youth and marginalized communities across Africa with access to quality education, vocational skills,
-          and global opportunities.
-        </p>
-
-        <p>With a strong background in science and technology, Olakunle earned his <strong>B.Sc. in Physics &
-            Electronics</strong> from the Federal University of Technology, Akure, Nigeria, and is currently pursuing a
-          <strong>Software Development degree at Brigham Young University (BYU)</strong>. His academic foundation is
-          complemented by hands-on experience in computer literacy training, IT hardware assembly, and network setup.
-        </p>
-
-        <p>From 2012 to 2018, Olakunle served as a Sciences and Computer Studies Teacher at DUZEK Christian School in
-          Johannesburg, South Africa, where he taught mathematics, physical sciences, and computer literacy. Later, as a
-          Computer Training Tutor at Obamarg Global in Nigeria, he mentored learners in digital skills and equipped them
-          for modern workforce demands.</p>
+        <p class="section-kicker">Leadership focus</p>
+        <h2>Guiding a practical mission for youth opportunity.</h2>
+        <p>Olakunle T. Obademi leads ZION Youth Development Initiative with a focus on education access, technology
+          confidence, mentoring, and structured community service. His leadership connects local needs with practical
+          programs that help young people develop skills, purpose, and responsibility.</p>
+        <p>With a background in Physics and Electronics and ongoing software development studies, he brings both
+          education experience and digital capability to the organization’s program strategy.</p>
+        <ul class="check-list">
+          <li>Youth mentoring and leadership development.</li>
+          <li>Digital skills, employability, and practical learning.</li>
+          <li>Community outreach partnerships and volunteer coordination.</li>
+        </ul>
       </div>
-
       <aside class="bio-card">
         <img class="bio-photo" src="images/president.jpg" alt="Olakunle T. Obademi" loading="lazy" />
         <div class="bio-card-content">
-          <h2>Focus Areas</h2>
-          <p>Education access, practical technology training, mentorship, and international opportunity pathways for
-            young people.</p>
+          <h3>President</h3>
+          <p>Responsible for vision, partnerships, strategic direction, and organizational accountability.</p>
         </div>
       </aside>
     </section>
 
-    <section class="container">
-      <h2>Community Projects & Activities</h2>
-      <p>Since founding ZION Youth Development Initiative, Olakunle has led grassroots and youth empowerment projects
-        with a strong focus on Ondo State, Nigeria, while expanding outreach to other communities.</p>
-
-      <div class="project-grid">
-        <article class="project-card">
-          <img src="images/ondo-youth-training.jpg" alt="Youth IT training in Akure" loading="lazy" />
-          <h3>Youth IT Skills Training - Akure, Ondo State</h3>
-          <p>Organized workshops teaching computer literacy, coding fundamentals, and digital job readiness.</p>
-        </article>
-
-        <article class="project-card">
-          <img src="images/ondo-school-renovation.jpg" alt="School support project in Ondo" loading="lazy" />
-          <h3>School Support Project - Owo, Ondo State</h3>
-          <p>Partnered with local leaders to support learning spaces and provide educational resources.</p>
-        </article>
-
-        <article class="project-card">
-          <img src="images/ondo-health-outreach.jpg" alt="Community outreach volunteers" loading="lazy" />
-          <h3>Community Outreach - Ifedore</h3>
-          <p>Coordinated volunteers to provide practical support and connect families with helpful resources.</p>
-        </article>
-
-        <article class="project-card">
-          <img src="images/nigeria-scholarship.jpg" alt="Scholarship and mentorship program" loading="lazy" />
-          <h3>Scholarship & Mentorship Program</h3>
-          <p>Connected talented African youth with scholarship opportunities and application guidance.</p>
-        </article>
+    <section class="content-band">
+      <div class="container">
+        <p class="section-kicker">Community priorities</p>
+        <h2>Projects shaped around education, skills, and service.</h2>
+        <div class="project-grid">
+          <article class="project-card">
+            <img src="images/ngo-digital-skills.png" alt="Youth digital training" loading="lazy" />
+            <div class="project-body">
+              <h3>Youth IT Skills Training</h3>
+              <p>Workshops that introduce computer literacy, digital confidence, coding fundamentals, and job-readiness
+                habits.</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="images/ngo-leadership.png" alt="Youth leadership planning" loading="lazy" />
+            <div class="project-body">
+              <h3>Leadership and Mentorship</h3>
+              <p>Support for young people through guidance, accountability, communication practice, and project planning.
+              </p>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="images/ngo-outreach.png" alt="Community outreach" loading="lazy" />
+            <div class="project-body">
+              <h3>Community Outreach</h3>
+              <p>Volunteer-led support that connects learning with visible service and local community improvement.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 ZION Youth Development Initiative</p>
+    <div class="container footer-grid">
+      <div>
+        <h3>ZION Youth Development Initiative</h3>
+        <p>Leadership grounded in service, learning, and youth opportunity.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <ul>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="container footer-bottom">&copy; 2026 ZION Youth Development Initiative. All rights reserved.</div>
   </footer>
 </body>
 

@@ -1,0 +1,13 @@
+{
+  "name": "zion-youth-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Responsive ZION Youth Development Initiative website with Vercel API-backed member signup.",
+  "scripts": {
+    "build": "echo \"Static site ready\"",
+    "vercel-build": "echo \"Static site ready\""
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.1.0"
+  }
+}
