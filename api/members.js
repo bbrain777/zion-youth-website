@@ -1,4 +1,5 @@
 const { ensureTables, getSqlClient, requireFields, sendError } = require("./db");
+const { sendConfirmationEmail } = require("./email");
 
 module.exports = async function handler(request, response) {
   if (request.method !== "POST") {
@@ -49,11 +50,17 @@ module.exports = async function handler(request, response) {
       )
       RETURNING id, created_at;
     `;
+    const emailResult = await sendConfirmationEmail({
+      email: body.email.trim().toLowerCase(),
+      name: body.firstName,
+      formType: "member",
+    }).catch((error) => ({ error: error.message }));
 
     return response.status(201).json({
       ok: true,
       id: rows[0].id,
       createdAt: rows[0].created_at,
+      emailSent: !emailResult.skipped && !emailResult.error,
     });
   } catch (error) {
     return sendError(response, error);

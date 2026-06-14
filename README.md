@@ -30,6 +30,16 @@ The tables are created automatically on first form submission. The manual schema
 - `POST /api/members` saves member applications to `member_applications`.
 - `POST /api/contact` saves contact messages to `contact_messages`.
 
+## Email Auto-Response
+
+The API can send a confirmation email after a successful form submission. Add these Vercel environment variables:
+
+- `RESEND_API_KEY` - Resend API key used to send email.
+- `FROM_EMAIL` - verified sender address, for example `ZION Youth <info@zionyouths.org>`.
+- `TEAM_REPLY_EMAIL` - reply-to address for the ZION Youth team, for example `info@zionyouths.org`.
+
+The auto-response tells the sender that the team will reach out within 72 hours. If `RESEND_API_KEY` is not configured, forms still save to the database but no email is sent.
+
 These routes intentionally do not store passwords. Member access is handled as an application/onboarding workflow. If full account login is needed later, add a real auth provider such as Clerk, Supabase Auth, or Auth.js rather than storing raw passwords.
 
 ## Local Notes
