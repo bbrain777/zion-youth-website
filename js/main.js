@@ -11,8 +11,19 @@ if (menuToggle && navLinks) {
 }
 
 function setTheme(theme) {
-  body.classList.toggle("dark-theme", theme === "dark");
+  if (theme === "dark") {
+    theme = "blue";
+  }
+
+  const isBlue = theme === "blue";
+  body.classList.toggle("dark-theme", isBlue);
   localStorage.setItem("theme", theme);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.textContent = isBlue ? "White" : "Blue";
+    themeToggleBtn.setAttribute("aria-label", isBlue ? "Switch to white theme" : "Switch to blue theme");
+    themeToggleBtn.setAttribute("title", isBlue ? "Switch to white theme" : "Switch to blue theme");
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -21,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 if (themeToggleBtn) {
   themeToggleBtn.addEventListener("click", () => {
-    setTheme(body.classList.contains("dark-theme") ? "light" : "dark");
+    setTheme(body.classList.contains("dark-theme") ? "light" : "blue");
   });
 }
 
