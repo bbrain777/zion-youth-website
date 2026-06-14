@@ -244,7 +244,7 @@ header {
 }
 
 .hero-panel {
-  background: rgb(255 255 255 / 0.92);
+  background: rgb(255 255 255 / 0.96);
   border: 1px solid rgb(255 255 255 / 0.55);
   border-radius: 8px;
   box-shadow: var(--shadow);
@@ -255,6 +255,13 @@ header {
 .hero-panel h3,
 .hero-panel p,
 .hero-panel li {
+  color: #082033;
+}
+
+body.dark-theme .hero-panel,
+body.dark-theme .hero-panel h3,
+body.dark-theme .hero-panel p,
+body.dark-theme .hero-panel li {
   color: #082033;
 }
 
