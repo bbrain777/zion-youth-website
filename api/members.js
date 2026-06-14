@@ -54,7 +54,10 @@ module.exports = async function handler(request, response) {
       email: body.email.trim().toLowerCase(),
       name: body.firstName,
       formType: "member",
-    }).catch((error) => ({ error: error.message }));
+    }).catch((error) => {
+      console.error("Member confirmation email failed:", error.message);
+      return { error: error.message };
+    });
 
     return response.status(201).json({
       ok: true,
