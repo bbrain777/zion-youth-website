@@ -248,8 +248,14 @@ header {
   border: 1px solid rgb(255 255 255 / 0.55);
   border-radius: 8px;
   box-shadow: var(--shadow);
-  color: var(--ink);
+  color: #082033;
   padding: 1.25rem;
+}
+
+.hero-panel h3,
+.hero-panel p,
+.hero-panel li {
+  color: #082033;
 }
 
 .hero-panel ul,
